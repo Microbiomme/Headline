@@ -4,6 +4,10 @@ data/ghost-local.db
 # Local Ghost Public Directory
 public/*
 
+assets/built/
+assets/built/screen.css.map
+assets/images/
+
 # Yarn files
 yarn.lock
 
