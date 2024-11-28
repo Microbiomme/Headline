@@ -4,7 +4,8 @@ data/ghost-local.db
 # Local Ghost Public Directory
 public/*
 
-
+# Yarn files
+yarn.lock
 
 # Default node .gitignore below
 # Logs
