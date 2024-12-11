@@ -1,0 +1,43 @@
+{{!< default}}
+
+{{#page}}
+<div class="gh-page">
+    <header class="gh-page-header">
+        <h1 class="gh-page-title">Gut Reset Bundle</h1>
+    </header>
+
+    <div class="gh-content">
+        <div class="gut-bundle-intro">
+            <p>Welcome to our Gut Reset Bundle - a comprehensive collection of articles, tips, and resources designed to help you restore your gut health and improve your overall wellbeing.</p>
+        </div>
+
+        {{#unless @member}}
+        <div class="gh-subscription-box">
+            <h2>Get Full Access to the Gut Reset Bundle</h2>
+            <p>Join our community to access all gut health resources and exclusive content.</p>
+            <div class="gh-subscribe-box">
+                {{subscribe_form 
+                    form_id="gut-bundle-signup"
+                    button_class="button primary"
+                    placeholder="Your email address"
+                }}
+            </div>
+        </div>
+        {{/unless}}
+
+        <div class="gh-feed">
+            {{#get "posts" filter="tag:gut-bundle" limit="12" as |gut_posts|}}
+                {{#if gut_posts}}
+                    <div class="gh-feed-entries">
+                        {{#foreach gut_posts}}
+                            {{> "post-card"}}
+                        {{/foreach}}
+                    </div>
+                {{else}}
+                    <p>No posts available in the Gut Reset Bundle yet.</p>
+                {{/if}}
+            {{/get}}
+        </div>
+    </div>
+</div></div>
+{{/page}}
