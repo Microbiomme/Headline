@@ -26,9 +26,9 @@
         {{/unless}}
 
         <div class="gh-feed">
-            {{#get "posts" filter="tag:gut-bundle" limit="12" as |gut_posts|}}
+            {{#get "posts" filter="tag:gut-reset-bundle" limit="12" as |gut_posts|}}
                 {{#if gut_posts}}
-                    <div class="gh-feed-entries">
+                    <div class="gh-topic-grid">
                         {{#foreach gut_posts}}
                             {{> "post-card"}}
                         {{/foreach}}
